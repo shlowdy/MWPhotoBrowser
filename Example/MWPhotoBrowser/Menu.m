@@ -8,7 +8,7 @@
 
 #import <Photos/Photos.h>
 #import "Menu.h"
-#import "SDImageCache.h"
+#import <SDWebImage/SDImageCache.h>
 #import "MWCommon.h"
 
 @implementation Menu
@@ -21,7 +21,7 @@
 		self.title = @"MWPhotoBrowser";
         
         // Clear cache for testing
-        [[SDImageCache sharedImageCache] clearDisk];
+        [[SDImageCache sharedImageCache] clearDiskOnCompletion:nil];
         [[SDImageCache sharedImageCache] clearMemory];
         
         _segmentedControl = [[UISegmentedControl alloc] initWithItems:[NSArray arrayWithObjects:@"Push", @"Modal", nil]];
@@ -30,7 +30,7 @@
         
         UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithCustomView:_segmentedControl];
         self.navigationItem.rightBarButtonItem = item;
-        self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStyleBordered target:nil action:nil];
+        self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStylePlain target:nil action:nil];
 
         [self loadAssets];
         
@@ -65,7 +65,7 @@
 //    [self.navigationController setNavigationBarHidden:NO animated:YES];
 }
 
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
+- (BOOL)shouldAutorotate {
     return YES;
 }
 
@@ -1271,7 +1271,7 @@
             options.sortDescriptors = @[[NSSortDescriptor sortDescriptorWithKey:@"creationDate" ascending:NO]];
             PHFetchResult *fetchResults = [PHAsset fetchAssetsWithOptions:options];
             [fetchResults enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
-                [_assets addObject:obj];
+                [self->_assets addObject:obj];
             }];
             if (fetchResults.count > 0) {
                 [self.tableView performSelectorOnMainThread:@selector(reloadData) withObject:nil waitUntilDone:NO];
@@ -1296,12 +1296,12 @@
                     if ([assetType isEqualToString:ALAssetTypePhoto] || [assetType isEqualToString:ALAssetTypeVideo]) {
                         [assetURLDictionaries addObject:[result valueForProperty:ALAssetPropertyURLs]];
                         NSURL *url = result.defaultRepresentation.url;
-                        [_ALAssetsLibrary assetForURL:url
+                        [self->_ALAssetsLibrary assetForURL:url
                                           resultBlock:^(ALAsset *asset) {
                                               if (asset) {
-                                                  @synchronized(_assets) {
-                                                      [_assets addObject:asset];
-                                                      if (_assets.count == 1) {
+                                                  @synchronized(self->_assets) {
+                                                      [self->_assets addObject:asset];
+                                                      if (self->_assets.count == 1) {
                                                           // Added first asset so reload data
                                                           [self.tableView performSelectorOnMainThread:@selector(reloadData) withObject:nil waitUntilDone:NO];
                                                       }
@@ -1325,7 +1325,7 @@
             };
             
             // Process!
-            [_ALAssetsLibrary enumerateGroupsWithTypes:ALAssetsGroupAll
+            [self->_ALAssetsLibrary enumerateGroupsWithTypes:ALAssetsGroupAll
                                             usingBlock:assetGroupEnumerator
                                           failureBlock:^(NSError *error) {
                                               NSLog(@"There is an error");
