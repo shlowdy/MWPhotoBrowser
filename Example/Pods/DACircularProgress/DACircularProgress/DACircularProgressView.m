@@ -123,7 +123,7 @@
 
 @end
 
-@interface DACircularProgressView ()
+@interface DACircularProgressView () <CAAnimationDelegate>
 
 @end
 
@@ -163,6 +163,7 @@
 
 - (void)didMoveToWindow
 {
+    [super didMoveToWindow];
     CGFloat windowContentsScale = self.window.screen.scale;
     self.circularProgressLayer.contentsScale = windowContentsScale;
     [self.circularProgressLayer setNeedsDisplay];

@@ -57,6 +57,7 @@
 		2DCFEE26C35368640E9504809E6A4E72 /* MBProgressHUD.h in Headers */ = {isa = PBXBuildFile; fileRef = 545A8D8AC38DA9DB745FD99C8DF29218 /* MBProgressHUD.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		2E558075A0A35066062F8FB2BC3BCACC /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4B4B3E17328525F7A4A62238883AB2B /* XCTest.framework */; };
 		2E6102493E1817380505954AC0371541 /* MWCaptionView.h in Headers */ = {isa = PBXBuildFile; fileRef = 76DA2995CB1CCD28EA1DCF64043DADC4 /* MWCaptionView.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		2E78F0313ECF460AF49B50EEF1B56D04 /* DACircularProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 572B86925D79760711809EDFB36F7709 /* DACircularProgressView.m */; };
 		3061326271EBB83E8398820ECFE13034 /* Pods-MWPhotoBrowser_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F4ACBD5C32F1FFD0E46D5F424C5B170F /* Pods-MWPhotoBrowser_Example-dummy.m */; };
 		30DC49514C1A0C670507330948AAB941 /* ExpectaSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = AA37327D299822785E7BDB5EA4A29E90 /* ExpectaSupport.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		3133E35EE225FC88373326B602AA80A6 /* MWPhotoBrowser.h in Headers */ = {isa = PBXBuildFile; fileRef = DF837CE5F4BB927B555C4893D9C76ABE /* MWPhotoBrowser.h */; settings = {ATTRIBUTES = (Project, ); }; };
@@ -71,6 +72,7 @@
 		341B3CAFC4989B899A13BB604BCA8366 /* SDWebImagePrefetcher.h in Headers */ = {isa = PBXBuildFile; fileRef = 54806F8A0788433839F5DD8FDE0D8270 /* SDWebImagePrefetcher.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		34247D73BA4ED2166489ABF8D5FB42C3 /* NSValue+Expecta.h in Headers */ = {isa = PBXBuildFile; fileRef = 6685C6E2AAB6BF74E7778C0712097CCC /* NSValue+Expecta.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		350451B877576A77F8E59C5644EE3C56 /* EXPMatchers+beSupersetOf.h in Headers */ = {isa = PBXBuildFile; fileRef = E45C276B8F33E0C9DC61B2A4263125D4 /* EXPMatchers+beSupersetOf.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		352E0C4E2C665DB5CE19CFF34BEFD363 /* DACircularProgress-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 81E6D88D878A3CF9B8806757DE76820D /* DACircularProgress-dummy.m */; };
 		363458F1BDA4A3C107E84C6060AB3A7E /* EXPMatchers+beSubclassOf.h in Headers */ = {isa = PBXBuildFile; fileRef = E0968B1382EA5734890E7A24517814DB /* EXPMatchers+beSubclassOf.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		36E3F2485858175BC7623EBD6F67F3CF /* SDWebImage-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D8265A2CE41852DE24268CDDEA7D7FC8 /* SDWebImage-dummy.m */; };
 		377BA877A725435D078BD8591ACC2271 /* EXPExpect.h in Headers */ = {isa = PBXBuildFile; fileRef = 8FA6A7AD31E16396D2C3A7E4702F32D1 /* EXPExpect.h */; settings = {ATTRIBUTES = (Project, ); }; };
@@ -91,7 +93,6 @@
 		438D276A2D57438A513843B07D96DF03 /* EXPMatchers+postNotification.h in Headers */ = {isa = PBXBuildFile; fileRef = D608FF57AB2DFD19AF5718F069D7C6D5 /* EXPMatchers+postNotification.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		4504D0173C00636A0DACDB005111C1F3 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DCD3DD8721263127CB6885D43E0C806 /* QuartzCore.framework */; };
 		46717D9AFFB2F18C19F5EFDC95BFD9FF /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DCD3DD8721263127CB6885D43E0C806 /* QuartzCore.framework */; };
-		47BB21BEF09D1DC86A84709B858C2A83 /* DALabeledCircularProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = F7DCFDF07F77C603056E8EAA0F28CCC3 /* DALabeledCircularProgressView.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
 		485E5DFE4E513F280E86AE13D7B94BE3 /* SPTCallSite.m in Sources */ = {isa = PBXBuildFile; fileRef = 718485D65B82D0E7494AC675F2497EBD /* SPTCallSite.m */; };
 		48D47DFB397EFA21EA69FD180FE518CD /* MWPhoto.h in Headers */ = {isa = PBXBuildFile; fileRef = 38D18EEA528CCD4F988C29E3D4B72131 /* MWPhoto.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		4A9A562406FF3C97C4129D66B18F6859 /* EXPDoubleTuple.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D55FDEA91ED3956ED5D96C4D3C494F9 /* EXPDoubleTuple.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -188,13 +189,13 @@
 		A63177D6857B240A8F5F54BD48E0A568 /* SPTCallSite.h in Headers */ = {isa = PBXBuildFile; fileRef = DBA27FAE5C58E5B9E674741C2B36A57F /* SPTCallSite.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		A7815DD4A8B9B206CC6897189FCC0939 /* SpectaDSL.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B66DACBF7C211F480E1937BEBA0FFFB /* SpectaDSL.m */; };
 		A9EB90E212D8C15E78E71155E9B7D33A /* SPTExample.h in Headers */ = {isa = PBXBuildFile; fileRef = 6817A60CAF66A32E1197B904D2ADA4C8 /* SPTExample.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		AAE8810EDE86D68F5B2421216F82EA85 /* DALabeledCircularProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = F7DCFDF07F77C603056E8EAA0F28CCC3 /* DALabeledCircularProgressView.m */; };
 		ACD61C094FFF443BFE1DA405C19047BB /* SpectaDSL.h in Headers */ = {isa = PBXBuildFile; fileRef = F115AACB472817D189DC2A40B955D41F /* SpectaDSL.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		AD5D0D9F9F3393EFB8FBBC0DE41D32D9 /* SDWebImageCompat.h in Headers */ = {isa = PBXBuildFile; fileRef = 17A7C1CDEB3BDB0783AAD58F15499CBA /* SDWebImageCompat.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		AED08EA54296829CA598D03E3863615D /* PlayButtonOverlayLarge@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F9C749D263376A4EEE8E5A59863FACB8 /* PlayButtonOverlayLarge@2x.png */; };
 		AF2D0A2EE9AEAF330E7F1ACA62F1A0D5 /* FBSnapshotTestCase.h in Headers */ = {isa = PBXBuildFile; fileRef = 5B48A0C70BAB968519E5CACC0B8C0AAB /* FBSnapshotTestCase.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		AFED30D01CDC8663958E2AF5312166F4 /* MWTapDetectingView.m in Sources */ = {isa = PBXBuildFile; fileRef = B38309BBBF6A4DC9554EEFD248C17522 /* MWTapDetectingView.m */; };
 		B11285DD5B3001AB0364544BFCF961AF /* SDImageCacheConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 166B12C6B7288B729971C643BAEA8BB2 /* SDImageCacheConfig.m */; };
-		B14C1B2BDCDC234F63C9BDF277D648C3 /* DACircularProgress-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 81E6D88D878A3CF9B8806757DE76820D /* DACircularProgress-dummy.m */; };
 		B20C4873070B62C234418F4FBA276EFC /* SDAnimatedImageRep.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C6CF09ABE83EE13FBF3ACAE5B85E62F /* SDAnimatedImageRep.m */; };
 		B294905952D86CED4BBEB0805EA7C2BE /* FBSnapshotTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = AF5F2684C5A32DC2F4A17FCE8DE0DA95 /* FBSnapshotTestCase.m */; };
 		B41C5BB717BEEAF8881EAADB6B79C85A /* DACircularProgressView.h in Headers */ = {isa = PBXBuildFile; fileRef = 81E0BB2B9E99DEE2E7CAA93D80FC04DD /* DACircularProgressView.h */; settings = {ATTRIBUTES = (Project, ); }; };
@@ -249,7 +250,6 @@
 		E08D66D4FF5BA27F4BFD16BFF1B3C614 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26106C37E52188C2880CEA1C3CFD14CE /* Foundation.framework */; };
 		E88E4C1BCB1CBA2A553235BB712DD5DA /* EXPMatchers+beGreaterThan.m in Sources */ = {isa = PBXBuildFile; fileRef = A5ACE47BABCEDB53876649BBD4566CC6 /* EXPMatchers+beGreaterThan.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		E94AC102014ABE5C8D37A0A7B465E523 /* EXPMatchers+beGreaterThan.h in Headers */ = {isa = PBXBuildFile; fileRef = 45ECCF3CB46ED87E4ECE8D404CDBE315 /* EXPMatchers+beGreaterThan.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		E99514AC4E89C6EBBC5E7101386ACC99 /* DACircularProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 572B86925D79760711809EDFB36F7709 /* DACircularProgressView.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
 		EDF3A124FB1E3705FC0B0E3317290ADB /* EXPMatchers+FBSnapshotTest.h in Headers */ = {isa = PBXBuildFile; fileRef = FBC19C3C1F6D34AC3682D51C4437EEE4 /* EXPMatchers+FBSnapshotTest.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		EEBA6A99C649807BE980CF246F5FDAF0 /* SDWebImageManager.h in Headers */ = {isa = PBXBuildFile; fileRef = CFCE7DBB4AFEFE0A58E141AFD3A96F2E /* SDWebImageManager.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		EF0095723CE9DDCE9D187B2355C1E61C /* SDWebImageCompat.m in Sources */ = {isa = PBXBuildFile; fileRef = ED919A57B200F7E61047094BD950577C /* SDWebImageCompat.m */; };
@@ -1603,7 +1603,7 @@
 			buildConfigurationList = 7475EB924B8C5E10A0B801B6FE07D44F /* Build configuration list for PBXNativeTarget "DACircularProgress" */;
 			buildPhases = (
 				D2E250CA0AEABC7326C825C9106F41F3 /* Headers */,
-				EDE0D45863859E236ADCD4D29BB8927A /* Sources */,
+				237CC36BD131632EFF07379BC7C8E284 /* Sources */,
 				8A7E2E1D0FE15D6BC5FD3836B9222C10 /* Frameworks */,
 			);
 			buildRules = (
@@ -1853,6 +1853,16 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		237CC36BD131632EFF07379BC7C8E284 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				352E0C4E2C665DB5CE19CFF34BEFD363 /* DACircularProgress-dummy.m in Sources */,
+				2E78F0313ECF460AF49B50EEF1B56D04 /* DACircularProgressView.m in Sources */,
+				AAE8810EDE86D68F5B2421216F82EA85 /* DALabeledCircularProgressView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		2A5114D9946575E12BD88D66E8F6C86D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -2009,16 +2019,6 @@
 				D055FD7C8BF85680C8386875D7E0E262 /* UIImage+Compare.m in Sources */,
 				5130C3DFA6A5668E838AF69DD11F22B5 /* UIImage+Diff.m in Sources */,
 				6166303B7CD08A4E70ED9F9B001C370D /* UIImage+Snapshot.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		EDE0D45863859E236ADCD4D29BB8927A /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				B14C1B2BDCDC234F63C9BDF277D648C3 /* DACircularProgress-dummy.m in Sources */,
-				E99514AC4E89C6EBBC5E7101386ACC99 /* DACircularProgressView.m in Sources */,
-				47BB21BEF09D1DC86A84709B858C2A83 /* DALabeledCircularProgressView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2362,22 +2362,6 @@
 			};
 			name = Release;
 		};
-		71B505DE5FF9A77A8B6A6533BC03D5E9 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 49FA87B3DA0BB697B02D136F558EB86A /* MWPhotoBrowser.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/MWPhotoBrowser";
-				INFOPLIST_FILE = "Target Support Files/MWPhotoBrowser/ResourceBundle-MWPhotoBrowser-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
-				PRODUCT_NAME = MWPhotoBrowser;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				WRAPPER_EXTENSION = bundle;
-			};
-			name = Release;
-		};
 		73ABEA19B2F47F2F6E53E2FEA5100098 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = CF2FFB51C4334E65C9B786535C280C33 /* Pods-MWPhotoBrowser_Tests.release.xcconfig */;
@@ -2400,29 +2384,6 @@
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
-		};
-		74F480D60E8743BBE41AD929C4ABC204 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = E49265143826D43E0126D4D6E21D1BA7 /* DACircularProgress.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				GCC_PREFIX_HEADER = "Target Support Files/DACircularProgress/DACircularProgress-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PRODUCT_MODULE_NAME = DACircularProgress;
-				PRODUCT_NAME = DACircularProgress;
-				PUBLIC_HEADERS_FOLDER_PATH = "";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
 		};
 		81DF5B5D8952B719049FFD464E3F88A8 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -2513,6 +2474,22 @@
 			};
 			name = Debug;
 		};
+		8337D7DC0C298A83B2349C455950A598 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 49FA87B3DA0BB697B02D136F558EB86A /* MWPhotoBrowser.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/MWPhotoBrowser";
+				INFOPLIST_FILE = "Target Support Files/MWPhotoBrowser/ResourceBundle-MWPhotoBrowser-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				PRODUCT_NAME = MWPhotoBrowser;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
 		8EEE16F130CEB55B101E9BF4ACAEFC12 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 881A149D16DD320B838551CCFF13E38B /* Specta.xcconfig */;
@@ -2560,6 +2537,53 @@
 			};
 			name = Debug;
 		};
+		A2ABB580A76527714FE012C73F24C6B5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 49FA87B3DA0BB697B02D136F558EB86A /* MWPhotoBrowser.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/MWPhotoBrowser/MWPhotoBrowser-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = MWPhotoBrowser;
+				PRODUCT_NAME = MWPhotoBrowser;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		AE7277D18D1E5B20A39393CF8D02C600 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 49FA87B3DA0BB697B02D136F558EB86A /* MWPhotoBrowser.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/MWPhotoBrowser/MWPhotoBrowser-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = MWPhotoBrowser;
+				PRODUCT_NAME = MWPhotoBrowser;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
 		AF9EE2D9B07E1F53AD5E28A6CC78745E /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 8674B2A88024CBF0958AF27A3F466AF4 /* Pods-MWPhotoBrowser_Example.release.xcconfig */;
@@ -2577,30 +2601,6 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		B7CA4684D911BF8ADB31FD195B56CCD9 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = E49265143826D43E0126D4D6E21D1BA7 /* DACircularProgress.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				GCC_PREFIX_HEADER = "Target Support Files/DACircularProgress/DACircularProgress-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PRODUCT_MODULE_NAME = DACircularProgress;
-				PRODUCT_NAME = DACircularProgress;
-				PUBLIC_HEADERS_FOLDER_PATH = "";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -2627,6 +2627,30 @@
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
+		};
+		CA9557D9CA2335113B0C604F32A6DC09 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E49265143826D43E0126D4D6E21D1BA7 /* DACircularProgress.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/DACircularProgress/DACircularProgress-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = DACircularProgress;
+				PRODUCT_NAME = DACircularProgress;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
 		};
 		DE019C4B61FE581BA057110FBC49EAA5 /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -2690,30 +2714,6 @@
 			};
 			name = Release;
 		};
-		E67941F1D3962E05E54E2C075F9B48AA /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 49FA87B3DA0BB697B02D136F558EB86A /* MWPhotoBrowser.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				GCC_PREFIX_HEADER = "Target Support Files/MWPhotoBrowser/MWPhotoBrowser-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PRODUCT_MODULE_NAME = MWPhotoBrowser;
-				PRODUCT_NAME = MWPhotoBrowser;
-				PUBLIC_HEADERS_FOLDER_PATH = "";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
 		F244DEC36E96C91E3F2D30E79C2C11F8 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 9FBB293797B720319E545F75C5B6F884 /* FBSnapshotTestCase.xcconfig */;
@@ -2739,37 +2739,21 @@
 			};
 			name = Release;
 		};
-		F63EF472EAEFCA19DFAE0D2AB1F54F41 /* Debug */ = {
+		F98B19CF2C7FCC2224D5F0D099A12A13 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 49FA87B3DA0BB697B02D136F558EB86A /* MWPhotoBrowser.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/MWPhotoBrowser";
-				INFOPLIST_FILE = "Target Support Files/MWPhotoBrowser/ResourceBundle-MWPhotoBrowser-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
-				PRODUCT_NAME = MWPhotoBrowser;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				WRAPPER_EXTENSION = bundle;
-			};
-			name = Debug;
-		};
-		F6DA17C5B484E5735DBFA6E37A2F3132 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 49FA87B3DA0BB697B02D136F558EB86A /* MWPhotoBrowser.xcconfig */;
+			baseConfigurationReference = E49265143826D43E0126D4D6E21D1BA7 /* DACircularProgress.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				GCC_PREFIX_HEADER = "Target Support Files/MWPhotoBrowser/MWPhotoBrowser-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				GCC_PREFIX_HEADER = "Target Support Files/DACircularProgress/DACircularProgress-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PRODUCT_MODULE_NAME = MWPhotoBrowser;
-				PRODUCT_NAME = MWPhotoBrowser;
+				PRODUCT_MODULE_NAME = DACircularProgress;
+				PRODUCT_NAME = DACircularProgress;
 				PUBLIC_HEADERS_FOLDER_PATH = "";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
@@ -2777,6 +2761,22 @@
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
+		};
+		FE11CA28FD680B044183434C5339C7D9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 49FA87B3DA0BB697B02D136F558EB86A /* MWPhotoBrowser.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/MWPhotoBrowser";
+				INFOPLIST_FILE = "Target Support Files/MWPhotoBrowser/ResourceBundle-MWPhotoBrowser-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				PRODUCT_NAME = MWPhotoBrowser;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
@@ -2793,8 +2793,8 @@
 		21CB65F2C21388163C7FF0CF06982F87 /* Build configuration list for PBXNativeTarget "MWPhotoBrowser" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				F6DA17C5B484E5735DBFA6E37A2F3132 /* Debug */,
-				E67941F1D3962E05E54E2C075F9B48AA /* Release */,
+				AE7277D18D1E5B20A39393CF8D02C600 /* Debug */,
+				A2ABB580A76527714FE012C73F24C6B5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -2838,8 +2838,8 @@
 		7475EB924B8C5E10A0B801B6FE07D44F /* Build configuration list for PBXNativeTarget "DACircularProgress" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				74F480D60E8743BBE41AD929C4ABC204 /* Debug */,
-				B7CA4684D911BF8ADB31FD195B56CCD9 /* Release */,
+				F98B19CF2C7FCC2224D5F0D099A12A13 /* Debug */,
+				CA9557D9CA2335113B0C604F32A6DC09 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -2874,8 +2874,8 @@
 		E486133E87F13A9BCD305759AFD5B20E /* Build configuration list for PBXNativeTarget "MWPhotoBrowser-MWPhotoBrowser" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				F63EF472EAEFCA19DFAE0D2AB1F54F41 /* Debug */,
-				71B505DE5FF9A77A8B6A6533BC03D5E9 /* Release */,
+				8337D7DC0C298A83B2349C455950A598 /* Debug */,
+				FE11CA28FD680B044183434C5339C7D9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

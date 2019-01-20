@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name = 'MWPhotoBrowser'
-  s.version = '2.1.2'
+  s.version = '2.2.0'
   s.license = 'MIT'
   s.summary = 'A simple iOS photo and video browser with optional grid view, captions and selections.'
   s.description = <<-DESCRIPTION
@@ -19,15 +19,14 @@ Pod::Spec.new do |s|
     'https://raw.github.com/mwaterfall/MWPhotoBrowser/master/Screenshots/MWPhotoBrowser6.png'
   ]
 
-  s.homepage = 'https://github.com/mwaterfall/MWPhotoBrowser'
+  s.homepage = 'https://github.com/shlowdy/MWPhotoBrowser'
   s.author = { 'Michael Waterfall' => 'michaelwaterfall@gmail.com' }
-  s.social_media_url = 'https://twitter.com/mwaterfall'
 
   s.source = {
-    :git => 'https://github.com/mwaterfall/MWPhotoBrowser.git',
-    :tag => '2.1.2'
+    :git => 'https://github.com/shlowdy/MWPhotoBrowser.git',
+    :tag => '2.2.0'
   }
-  s.platform = :ios, '8.2'
+  s.platform = :ios, '8.0'
   s.source_files = 'Pod/Classes/**/*'
   s.resource_bundles = {
     'MWPhotoBrowser' => ['Pod/Assets/*.png']
@@ -38,7 +37,7 @@ Pod::Spec.new do |s|
   s.weak_frameworks = 'Photos'
 
   s.dependency 'MBProgressHUD', '~> 1.0'
-  s.dependency 'DACircularProgress', '~> 2.0'
+  s.dependency 'DACircularProgress', '~> 2.4'
   s.dependency 'SDWebImage', '~> 4.0'
 
 end
